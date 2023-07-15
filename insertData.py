@@ -1,0 +1,72 @@
+import sqlite3
+
+conn = sqlite3.connect('score')
+c = conn.cursor()
+
+##text values need quotation mark
+c.execute('''
+insert into scores (fName, lName, course, work_type, grade, grade_processed)
+values
+("Lourdes","Bauswell","Javascript","Assignments","47",47),
+("Lourdes","Bauswell","Javascript","Midterms","52",52),
+("Lourdes","Bauswell","Javascript","Final","42",42),
+("Lourdes","Bauswell","Python","Assignments","53",53),
+("Lourdes","Bauswell","Python","Midterms","(86, 86)",86),
+("Lourdes","Bauswell","Python","Final","88",88),
+("Lourdes","Bauswell","Web design","Assignments","57",57),
+("Lourdes","Bauswell","Web design","Midterms","83",83),
+("Lourdes","Bauswell","Web design","Final","95",95),
+("Lourdes","Bauswell","Database","Assignments","79",79),
+("Lourdes","Bauswell","Database","Midterms","87",87),
+("Lourdes","Bauswell","Database","Final","49",49),
+("Hannah","Edmison","Javascript","Assignments","83",83),
+("Hannah","Edmison","Javascript","Midterms","93",93),
+("Hannah","Edmison","Javascript","Final","86",86),
+("Hannah","Edmison","Python","Assignments","54",54),
+("Hannah","Edmison","Python","Midterms","(90, 88, 78)",85.3),
+("Hannah","Edmison","Python","Final","92",92),
+("Hannah","Edmison","Web design","Assignments","80",80),
+("Hannah","Edmison","Web design","Midterms","56",56),
+("Hannah","Edmison","Web design","Final","99",99),
+("Hannah","Edmison","Database","Assignments","83",83),
+("Hannah","Edmison","Database","Midterms","97",97),
+("Hannah","Edmison","Database","Final","43",43),
+("Tom","Loeza","Javascript","Assignments","99",99),
+("Tom","Loeza","Javascript","Midterms","93",93),
+("Tom","Loeza","Javascript","Final","82",82),
+("Tom","Loeza","Python","Assignments","49",49),
+("Tom","Loeza","Python","Midterms","(87, 66)",76.5),
+("Tom","Loeza","Python","Final","71",71),
+("Tom","Loeza","Web design","Assignments","63",63),
+("Tom","Loeza","Web design","Midterms","74",74),
+("Tom","Loeza","Web design","Final","80",80),
+("Tom","Loeza","Database","Assignments","51",51),
+("Tom","Loeza","Database","Midterms","68",68),
+("Tom","Loeza","Database","Final","54",54),
+("Kendra","Loud","Javascript","Assignments","91",91),
+("Kendra","Loud","Javascript","Midterms","99",99),
+("Kendra","Loud","Javascript","Final","40",40),
+("Kendra","Loud","Python","Assignments","90",90),
+("Kendra","Loud","Python","Midterms","(83, 89, 99)",90.3),
+("Kendra","Loud","Python","Final","44",44),
+("Kendra","Loud","Web design","Assignments","83",83),
+("Kendra","Loud","Web design","Midterms","100",100),
+("Kendra","Loud","Web design","Final","53",53),
+("Kendra","Loud","Database","Assignments","90",90),
+("Kendra","Loud","Database","Midterms","86",86),
+("Kendra","Loud","Database","Final","42",42),
+("Franccoise","Rautenstrauch","Javascript","Assignments","96",96),
+("Franccoise","Rautenstrauch","Javascript","Midterms","64",64),
+("Franccoise","Rautenstrauch","Javascript","Final","100",100),
+("Franccoise","Rautenstrauch","Python","Assignments","84",84),
+("Franccoise","Rautenstrauch","Python","Midterms","(65, 98)",81.5),
+("Franccoise","Rautenstrauch","Python","Final","72",72),
+("Franccoise","Rautenstrauch","Web design","Assignments","66",66),
+("Franccoise","Rautenstrauch","Web design","Midterms","50",50),
+("Franccoise","Rautenstrauch","Web design","Final","67",67),
+("Franccoise","Rautenstrauch","Database","Assignments","92",92),
+("Franccoise","Rautenstrauch","Database","Midterms","54",54),
+("Franccoise","Rautenstrauch","Database","Final","70",70)
+''')
+
+conn.commit()
