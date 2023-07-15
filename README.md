@@ -2,7 +2,7 @@
 
 ##### 1. Application directory structure
 
-<img src="C:/Users/jolly/AppData/Roaming/Typora/typora-user-images/image-20230715124853698.png" alt="image-20230715124853698" style="zoom:50%;" />
+<img src="assets/image-20230715124853698.png" alt="image-20230715125418461" style="zoom:50%;" />
 
 
 
@@ -60,6 +60,6 @@ Output:
 
 
 
-iv. On the laptop, connect to `http://<pi-ip-address>:5000`
+###### iv. On the laptop, connect to `http://<pi-ip-address>:5000`
 
 ![image-20230715132000013](assets/image-20230715132000013.png)
