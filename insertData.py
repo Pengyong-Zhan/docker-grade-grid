@@ -3,7 +3,6 @@ import sqlite3
 conn = sqlite3.connect('score')
 c = conn.cursor()
 
-##text values need quotation mark
 c.execute('''
 insert into scores (fName, lName, course, work_type, grade, grade_processed)
 values

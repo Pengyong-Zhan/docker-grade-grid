@@ -1,16 +1,15 @@
-#don't use sqlite3 as file name!!
 import sqlite3
 from sqlite3 import Error
 
 def create_connection(DBName):
     conn = None
     try:
-        conn = sqlite3.connect(DBName)  # returns a Connection object that represents the database
+        conn = sqlite3.connect(DBName)
         print(sqlite3.version)
-        print("test0", conn)  # test0 <sqlite3.Connection object at 0x000001D431F467B0>
+        print("test0", conn) 
     except sqlite3.Error as e:
         print(e)
-    return conn  # important!! when return and when don't return???
+    return conn 
 
 
 def createTable(conn, create_table_sql):
@@ -33,7 +32,7 @@ def startCreating():
                                         grade_processed int
                                     ); """
     conn = create_connection(database)
-    print("test", conn)  # test None, without return in create_connection() before hand
+    print("test", conn) 
 
     if conn is not None:
         createTable(conn, sql_create_scores_table)
